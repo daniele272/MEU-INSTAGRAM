@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Título da página -->
+    <title>Meu Instagram</title>
+
+    <!-- Importa o CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+DIV PRINCIPAL
+Tudo da aplicação fica aqui dentro
+-->
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <!-- Barra lateral de navegação -->
+    <nav class="sidebar">
+        <button title="Início">🏠</button>
+        <button title="Pesquisar">🔍</button>
+        <button title="Nova Postagem">➕</button>
+        <button title="Perfil">👤</button>
+    </nav>
+
+    <!-- ================= CONTEÚDO ================= -->
+    <main class="content">
+
+        <!-- ========== CARD DE PERFIL / NOVA POSTAGEM ========== -->
+        <section class="card create-post">
+
+            <!-- Dados do usuário logado -->
+            <div class="user-header">
+            
+                <img src="img/user.JPG" alt="Usuário">
+
+                <div class="user-info">
+                
+                    <strong>Daniele Nascimento</strong>
+                    <span>@duda_anascimento</span>
+                </div>
+
+                <button class="edit-btn">Editar Perfil</button>
+            </div>
+
+            <!-- Campo de texto para nova postagem -->
+            <textarea placeholder="Quais são as novidades?"></textarea>
+
+            <!-- Botão de publicar -->
+            <button class="publish-btn" onclick="publicarPost()">Publicar</button>
+        </section>
+
+        <!-- ========== FEED DE POSTAGENS ========== -->
+        <section id="feed">
+
+            <!-- ================= POST 1 ================= -->
+            <div class="card post">
+
+                <div class="post-header">
+                    <img src="img/post1.jpeg">
+
+                    <div>
+                        <strong>Loren Cambuy</strong>
+                        <span>@lorencambuy</span>
+                    </div>
+                </div>
+
+                <p> "Agradeço a Deus por sua vida. A Bíblia diz que 'assim como o ferro afia o ferro,
+                     o homem afia o seu companheiro' (Provérbios 27:17).
+                     Obrigado(a) por ser essa pessoa que me incentiva a crescer na fé".</p>
+
+                <div class="post-actions">
+                    <button onclick="curtir(this)">🤍</button>
+                    <span class="likes">15 curtidas</span>
+
+                    <button onclick="comentar()">💬</button>
+                    <span>12 comentários</span>
+                </div>
+            </div>
+
+            <!-- ================= POST 2 ================= -->
+            <div class="card post">
+
+                <div class="post-header">
+                    <img src="img/post2.jpeg">
+
+                    <div>
+                        <strong>Nathália Michelly</strong>
+                        <span>@nathaliamichelly</span>
+                    </div>
+                </div>
+
+                <p>"Lembre-se: 'O amigo ama em todos os momentos; é um irmão na adversidade' (Provérbios 17:17). Estou aqui para o que precisar, orando por você".</p>
+
+                <div class="post-actions">
+                    <button onclick="curtir(this)">🤍</button>
+                    <span class="likes">23 curtidas</span>
+
+                    <button onclick="comentar()">💬</button>
+                    <span>10 comentários</span>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+<!-- Importa o JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
